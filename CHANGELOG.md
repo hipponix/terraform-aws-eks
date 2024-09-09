@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/hipponix/terraform-aws-eks/compare/v1.0.1...v1.0.2) (2024-09-09)
+
+
+### Bug Fixes
+
+* **readme:** add a basic readme info ([486bb70](https://github.com/hipponix/terraform-aws-eks/commit/486bb709ccdb81aa57e7ebf29f55ef9ac5b1ef95))
+
 ## [1.0.1](https://github.com/hipponix/terraform-aws-eks/compare/v1.0.0...v1.0.1) (2024-09-09)
 
 

@@ -267,7 +267,7 @@ resource "aws_instance" "bastion" {
   key_name               = var.key_name
   iam_instance_profile   = aws_iam_instance_profile.this.name
   vpc_security_group_ids = [aws_security_group.bastion.id]
-  user_data              = file("${path.module}/userdata.sh")
+  user_data              = file("${path.module}/assets/userdata.sh")
   depends_on = [
     aws_eks_cluster.this,
     aws_eks_node_group.ec2_ondemand

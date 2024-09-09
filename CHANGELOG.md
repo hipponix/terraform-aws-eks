@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/hipponix/terraform-aws-eks/compare/v1.0.0...v1.0.1) (2024-09-09)
+
+
+### Bug Fixes
+
+* **userdata:** adjust the userdata.sh path as per new structure ([b6ac500](https://github.com/hipponix/terraform-aws-eks/commit/b6ac50053b6d9cbdc02882ec5949f4a381a5b169))
+
 # 1.0.0 (2024-09-08)
 
 

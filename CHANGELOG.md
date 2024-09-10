@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/hipponix/terraform-aws-eks/compare/v1.0.3...v1.1.0) (2024-09-10)
+
+
+### Features
+
+* **eks:** add bastion creation and capacity_type optionable ([37a0e14](https://github.com/hipponix/terraform-aws-eks/commit/37a0e1435ad011e1122b6c3dfddbf2c12bd00ea1))
+
 ## [1.0.3](https://github.com/hipponix/terraform-aws-eks/compare/v1.0.2...v1.0.3) (2024-09-10)
 
 

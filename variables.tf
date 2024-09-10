@@ -28,7 +28,7 @@ variable "eks_subnets" {
 
 variable "capacity_type" {
   description = "Define the EKS capacity type (ON_DEMAND, SPOT)"
-  type        = list(any)
+  type        = string
   validation {
     condition = contains(["ON_DEMAND", "SPOT"], var.capacity_type)
     error_message = "Capacity_type must be either be 'ON_DEMAND' or 'SPOT'"

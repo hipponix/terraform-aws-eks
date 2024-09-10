@@ -1,3 +1,4 @@
+# EKS
 variable "eks_version" {
   description = "Version of EKS"
   type        = string
@@ -23,6 +24,22 @@ variable "vpc" {
 variable "eks_subnets" {
   description = "__todo__"
   type        = list(any)
+}
+
+variable "capacity_type" {
+  description = "Define the EKS capacity type (ON_DEMAND, SPOT)"
+  type        = list(any)
+  validation {
+    condition = contains(["ON_DEMAND", "SPOT"], var.capacity_type)
+    error_message = "Capacity_type must be either be 'ON_DEMAND' or 'SPOT'"
+  }
+}
+
+# Bastion host
+variable "create_bastion_host" {
+  description = "It defines whether to create a bastion host or not"
+  type        = bool
+  default = false
 }
 
 variable "ami_subnet" {

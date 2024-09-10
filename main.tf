@@ -117,7 +117,7 @@ resource "aws_eks_node_group" "ec2_ondemand" {
   subnet_ids      = [var.eks_subnets[0].id, var.eks_subnets[1].id]
   version         = aws_eks_cluster.this.version
   ami_type        = "AL2_x86_64"
-  capacity_type   = "ON_DEMAND"
+  capacity_type   = var.capacity_type
 
   launch_template {
     id      = aws_launch_template.this.id
@@ -261,6 +261,7 @@ resource "aws_lb_target_group" "this" {
 # Bastion Host
 # -----------------------------------------------------------------------------
 resource "aws_instance" "bastion" {
+  count                  = var.create_bastion_host == true ? 1 : 0
   ami                    = data.aws_ami.al2023.id
   instance_type          = "t3.micro"
   subnet_id              = var.ami_subnet

@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/hipponix/terraform-aws-eks/compare/v1.1.2...v1.1.3) (2024-09-10)
+
+
+### Bug Fixes
+
+* **readme:** fix a typo ([572b3a9](https://github.com/hipponix/terraform-aws-eks/commit/572b3a9ddf30a228c3e3a49f3a2e1430d1a1ae37))
+
 ## [1.1.2](https://github.com/hipponix/terraform-aws-eks/compare/v1.1.1...v1.1.2) (2024-09-10)
 
 

@@ -5,9 +5,9 @@ This is just a simple EKS module for terraform which I am using for learning and
 
 It depends on three terraform modules:
 
-- (hipponix/terraform-aws-tags)[https://github.com/hipponix/terraform-aws-tags)
-- (hipponix/terraform-aws-ssm)[https://github.com/hipponix/terraform-aws-ssm)
-- (hipponix/terraform-aws-network)[https://github.com/hipponix/terraform-aws-network)
+- [hipponix/terraform-aws-tags](https://github.com/hipponix/terraform-aws-tags)
+- [hipponix/terraform-aws-ssm](https://github.com/hipponix/terraform-aws-ssm)
+- [hipponix/terraform-aws-network](https://github.com/hipponix/terraform-aws-network)
 
 An optionable bastian host can be created if you intend to protect your cluster in a private network thus not accessible from internet. If that's the case, then set the variable `create_bastion_host` to `true`.
 

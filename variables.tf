@@ -58,3 +58,8 @@ variable "addons" {
     version = string
   }))
 }
+
+variable "public_keys" {
+  type = list
+  description = "A list of public keys used to connect to the server"
+}

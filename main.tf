@@ -91,10 +91,10 @@ resource "aws_eks_access_policy_association" "this" {
 }
 
 resource "aws_security_group_rule" "this" {
-  type      = "ingress"
-  from_port = 0
-  to_port   = 0
-  protocol  = "-1"
+  type                     = "ingress"
+  from_port                = 0
+  to_port                  = 0
+  protocol                 = "-1"
   source_security_group_id = aws_security_group.bastion.id
   security_group_id        = aws_eks_cluster.this.vpc_config[0].cluster_security_group_id
   depends_on = [
@@ -250,10 +250,10 @@ resource "aws_security_group" "this" {
 # ALB
 # -----------------------------------------------------------------------------
 resource "aws_lb_target_group" "this" {
-  name        = "${local.prefix}-eks"
-  port = "443"
+  name     = "${local.prefix}-eks"
+  port     = "443"
   protocol = "HTTP"
-  vpc_id      = var.vpc
+  vpc_id   = var.vpc
 }
 
 # -----------------------------------------------------------------------------

@@ -26,3 +26,8 @@ repos:
           - '--args=--only=terraform_workspace_remote'
           - '--args=--only=terraform_unused_required_providers'
       - id: terraform_validate
+-   repo: https://github.com/terraform-docs/terraform-docs
+    rev: "v0.19.0"
+    hooks:
+      - id: terraform-docs-go
+        args: ["--output-file", "docs/terraform-docs.", "."]

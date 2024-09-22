@@ -30,7 +30,7 @@ variable "capacity_type" {
   description = "Define the EKS capacity type (ON_DEMAND, SPOT)"
   type        = string
   validation {
-    condition = contains(["ON_DEMAND", "SPOT"], var.capacity_type)
+    condition     = contains(["ON_DEMAND", "SPOT"], var.capacity_type)
     error_message = "Capacity_type must be either be 'ON_DEMAND' or 'SPOT'"
   }
 }
@@ -39,7 +39,7 @@ variable "capacity_type" {
 variable "create_bastion_host" {
   description = "It defines whether to create a bastion host or not"
   type        = bool
-  default = false
+  default     = false
 }
 
 variable "ami_subnet" {
@@ -60,6 +60,6 @@ variable "addons" {
 }
 
 variable "public_keys" {
-  type = list
+  type        = list(any)
   description = "A list of public keys used to connect to the server"
 }
